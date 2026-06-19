@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/checkContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/usb_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_usb"
+                    android:tint="@android:color/holo_red_dark" />
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:maxHeight="200dp"
+                    android:text="@string/adb_device_not_connected"
+                    android:textIsSelectable="true"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/maedhost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="local file"
+                            android:ems="10" />
+                        <EditText
+                            android:id="@+id/maedclient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="target file"
+                            android:ems="10" />
+                        <Button
+                            android:id="@+id/mabupull"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="pull" />
+                        <Button
+                            android:id="@+id/mabupush"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="push" />
+                        <EditText
+                            android:id="@+id/maedapp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="local apk"
+                            android:ems="10" />
+                        <Button
+                            android:id="@+id/mabuinstall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="install" />
+                        <EditText
+                            android:id="@+id/maedcmd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="command"
+                            android:ems="10" />
+                        <Button
+                            android:id="@+id/maburuncmd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="run command" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
